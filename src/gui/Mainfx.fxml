@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainfxController">
+   <children>
+    <ImageView fx:id="imageView" fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" />
+      <TextArea fx:id="outputTextArea" editable="false" prefHeight="46.0" prefWidth="701.0" promptText="Current Command" style="-fx-background-color: black;" styleClass="text-area2" stylesheets="@flatbee.css" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Button fx:id="StartStopMicButton" layoutX="258.0" layoutY="45.0" mnemonicParsing="false" onAction="#startMic" prefHeight="18.0" prefWidth="185.0" style="-fx-background-color: #5454c5; -fx-background-radius: 10 10 10 10;" text="Start Voice Command" textFill="WHITE" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="257.0" AnchorPane.topAnchor="45.0">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+     
+   </children>
+</AnchorPane>
