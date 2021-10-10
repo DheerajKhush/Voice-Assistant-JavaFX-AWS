@@ -11,19 +11,15 @@ import java.util.concurrent.ExecutionException;
 
 import com.amazonaws.transcribestreaming.StreamTranscriptionBehavior;
 import com.amazonaws.transcribestreaming.TranscribeStreamingClientWrapper;
-import com.amazonaws.transcribestreaming.TranscribeStreamingSynchronousClient;
 import com.media.youtubePlayer.VideoPlayer;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.MediaView;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -42,7 +38,7 @@ public class MainfxController implements Initializable {
 	private TextArea outputTextArea;
 	@FXML
 	private Button StartStopMicButton, browserButton;
-	
+
 	Stage primaryStage;
 	@FXML
 	private WebView webViewBrowser;
@@ -59,23 +55,23 @@ public class MainfxController implements Initializable {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-//		
+//
 //		Runnable task=()->{
 //			Platform.runLater(new Runnable() {
 //
 //				@Override
 //				public void run() {
-					
+
 					parallelRunner = Main.getParallelRunner();
 					client=Main.getClient();
 					StartStopMicButton.fire();
-				
+
 //					Image image = new Image(new File("background.gif").toURI().toString());
-//					imageView.setImage(image);					
-					
+//					imageView.setImage(image);
+
 //				}
 //
-//					
+//
 //				});
 //			};
 //			Thread thread = new Thread(task);
@@ -85,8 +81,8 @@ public class MainfxController implements Initializable {
 
 	}
 
-		
-		
+
+
 
 
 	public void close() {
@@ -207,7 +203,7 @@ public class MainfxController implements Initializable {
 
 	protected void performAction(String transcript) throws IOException {
 		String resultStr = transcript.toLowerCase();
-		
+
 		if (resultStr.contains("hello") || resultStr.contains("hello maya.")) {
 
 			String currentCommand = "hello";
@@ -260,9 +256,9 @@ public class MainfxController implements Initializable {
 
 			String currentCommand = "movie " + resultStr;
 			if (!currentCommand.equals(lastCommand)) {
-				
+
 				VideoPlayer.showVideo();
-				
+
 				parallelRunner.playMovie();
 				lastCommand = currentCommand;
 			}
@@ -271,14 +267,15 @@ public class MainfxController implements Initializable {
 
 			String currentCommand = "stop " + resultStr;
 			if (!currentCommand.equals(lastCommand)) {
-				
+
 				StartStopMicButton.fire();
 			}
 
 		}
-		
+
 	}
-	
 
 
+
+}
 }

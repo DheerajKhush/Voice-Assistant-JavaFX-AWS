@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import com.amazonaws.polly.PollyDemo;
 import com.googlesearch.GoogleSearchResult;
-import com.media.youtubePlayer.VideoPlayer;
 
 public class ParallelRunner {
 
@@ -19,7 +18,7 @@ public class ParallelRunner {
 	ParallelRunner pRunner= new ParallelRunner();
 //		pRunner.startSearching("Narendra modi");
 		pRunner.playMovie();
-		
+
 	}
 
 	void startSearching(String quString) throws IOException {
@@ -104,5 +103,5 @@ public class ParallelRunner {
 		}
 
 	}
-	
+
 }

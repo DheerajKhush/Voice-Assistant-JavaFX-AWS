@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 public class VideoPlayer {
 	Stage primaryStage;
-	
+
 	 public static void showVideo() {
 		Runnable task=()->{
 		Platform.runLater(new Runnable() {
@@ -44,6 +44,6 @@ public class VideoPlayer {
 
 	}
 
-	
+
 
 }
