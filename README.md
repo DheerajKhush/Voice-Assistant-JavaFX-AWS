@@ -14,4 +14,4 @@ Perform google search, and speaks results in real-time
     AWS Transcibe - Speech to text - Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy for developers to add speech to text capability to their applications.
 
 ## working demo video
-[![Watch the video](https://drive.google.com/uc?export=download&id=19-y5xz4w-5_uUSz2CoLhEMOeNxwcG3qA)](https://drive.google.com/file/d/1zSQS__Wlq5XKtz8mNTEenIPxP05LtnAj/view?usp=sharing)
+[![Watch the video](https://drive.google.com/uc?export=download&id=19-y5xz4w-5_uUSz2CoLhEMOeNxwcG3qA)](https://youtu.be/XWeR5ne6Y4k)
